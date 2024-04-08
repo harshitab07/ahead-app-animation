@@ -5,3 +5,5 @@
   <li>Framework: NextJs</li>
   <li>Motion framer for animation</li>
 </ul>
+
+![image](https://github.com/harshitab07/ahead-app-animation/assets/95317276/61b161fa-f50a-47c5-846d-43ae9f681265)
