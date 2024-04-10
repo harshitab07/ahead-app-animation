@@ -1,7 +1,6 @@
-"use client";
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
+
 const EverWonder = () => {
   return (
     <section className="mt-16 mb-32 rounded-3xl bg-blue-50 p-10 mx-24">
@@ -31,7 +30,7 @@ const EverWonder = () => {
           <div className="flex flex-col justify-center">
             <div className="flex justify-center">
               <div className="">
-                <Image width={50} height={50} alt="" src="/badge.png" />
+                <img width={50} height={50} alt="" src="/badge.png" />
               </div>
             </div>
             <div className="text-center">
@@ -43,7 +42,7 @@ const EverWonder = () => {
           <div className="flex flex-col justify-center">
             <div className="flex justify-center">
               <div className="">
-                <Image width={50} height={50} alt="" src="/badge.png" />
+                <img width={50} height={50} alt="" src="/badge.png" />
               </div>
             </div>
             <div className="text-center">
@@ -55,7 +54,7 @@ const EverWonder = () => {
           <div className="flex flex-col justify-center">
             <div className="flex justify-center">
               <div className="">
-                <Image width={50} height={50} alt="" src="/badge.png" />
+                <img width={50} height={50} alt="" src="/badge.png" />
               </div>
             </div>
             <div className="text-center">

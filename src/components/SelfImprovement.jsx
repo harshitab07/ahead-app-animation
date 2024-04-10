@@ -1,9 +1,5 @@
-"use client";
 import React from "react";
-import Image from "next/image";
-import Fade from 'react-awesome-reveal';
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 
@@ -61,7 +57,7 @@ const SelfImprovement = () => {
           }}
           className="flex items-center justify-center"
         >
-          <Image
+          <img
             src="/blue-ghost.png"
             alt="download applestore"
             width={70}
@@ -70,7 +66,7 @@ const SelfImprovement = () => {
         </motion.div>
       </div>
 
-      <div className="timeline px-20 pt-14 h-96 overflow-y-scroll">
+      <div className="timeline px-20 pt-14 h-96 overflow-y-scroll" style={{scrollbarWidth: "none"}}>
         <div className="border-l-2 border-l-violet-300   flex  flex-col gap-16">
           <Reveal keyframes={customAnimation}>
           {[...Array(8)].map((val, index) => {

@@ -1,6 +1,4 @@
-"use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const MeetAheadCard = () => {
@@ -90,7 +88,7 @@ const MeetAheadCard = () => {
           className="h-28 w-24 absolute"
           style={{ right: "60%", top: "20%", transform: "translate(50%,50%)" }}
         >
-          <Image height={100} width={100} src="/leaf.png" alt="" />
+          <img height={100} width={100} src="/leaf.png" alt="" />
         </motion.div>
 
         {/*GHost Div  */}
@@ -108,7 +106,7 @@ const MeetAheadCard = () => {
             }}
             className="h-20 w-16 inline-block"
           >
-            <Image height={100} width={100} src="/newGhost.png" className="h-full w-full" alt="" />
+            <img height={100} width={100} src="/newGhost.png" className="h-full w-full" alt="" />
           </motion.div>
           {/*Badge*/}
           <motion.div
@@ -128,7 +126,7 @@ const MeetAheadCard = () => {
             className="absolute h-11 w-11"
             style={{ top: "-22px" }}
           >
-            <Image height={100} width={100} src="/badge.png" alt="" />
+            <img height={100} width={100} src="/badge.png" alt="" />
           </motion.div>
         </div>
       </div>
@@ -150,7 +148,7 @@ const MeetAheadCard = () => {
         style={{ right: "280px", top: "-20px" }}
         className="h-11 w-11 absolute "
       >
-        <Image height={100} width={100}src="/flower.png" alt="" />
+        <img height={100} width={100}src="/flower.png" alt="" />
       </motion.div>
     </div>
   );

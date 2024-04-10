@@ -1,29 +1,9 @@
-"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-
-const vacancies = [
-  {
-    jobTitle: "Senior Full Stack Engineer",
-    position: "Full-time position",
-    location: "Berlin or Remote",
-    pay: "€65-85, 1.5%-2.5% equity share options",
-  },
-  {
-    jobTitle: "Senior Designer",
-    position: "Full-time position",
-    location: "Berlin or Remote",
-    pay: "€45-85, 3.5%-7.5% equity share options",
-  },
-  {
-    jobTitle: "Superstar Intern",
-    position: "Full-time position",
-    location: "Berlin or Remote",
-    pay: "€45-85, 8.5%-2.5% equity share options",
-  },
-];
+import { jobs } from "../data/vacancies";
 
 const OpenVacancies = () => {
+  const vacancies = jobs;
   return (
     <section className="mt-20 py-8 px-24 h-96">
       <motion.div
@@ -61,7 +41,7 @@ const HoverCard = ({ vac, index }) => {
     <>
       <motion.div
         initial={{ height: 170 }}
-        whileHover={{ height: 250 }}
+        whileHover={{ height: 270 }}
         key={index}
         onHoverStart={() => setButtonVisible(true)}
         onHoverEnd={() => setButtonVisible(false)}
@@ -77,7 +57,7 @@ const HoverCard = ({ vac, index }) => {
             <li className="">{vac.pay}</li>
           </ul>
         </div>
-        {isButtonVisible && (
+        {isButtonVisible && <div className="flex row">
           <motion.button
             initial="hidden"
             whileInView="visible"
@@ -86,11 +66,11 @@ const HoverCard = ({ vac, index }) => {
               visible: { opacity: 1, scale: 1 },
               hidden: { opacity: 0, scale: 0.7 },
             }}
-            className="mx-10 cursor-pointer text-white bg-black rounded-full px-3 py-2 mt-4"
+            className="mx-10 cursor-pointer text-white bg-black rounded-md px-3 py-2 mt-1"
           >
             See Details
           </motion.button>
-        )}
+        </div>}
       </motion.div>
     </>
   );

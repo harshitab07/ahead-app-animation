@@ -1,6 +1,4 @@
-"use client";
 import React from 'react'
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 const AppStore = () => {
@@ -12,7 +10,7 @@ const AppStore = () => {
                         <div className='w-full'><p className='text-lg'>Ahead app</p></div>
                         <div><p className='mt-5  text-5xl font-bold'>Master Your life by mastering emotions</p></div>
                         <div className="flex gap-7 items-center  w-full">
-                            <Image
+                            <img
                                 width={150}
                                 height={30}
                                 alt="Apple Play Store"
@@ -23,7 +21,7 @@ const AppStore = () => {
                                 <div className="flex gap-2">
                                     {[...Array(5)].map((val, index) => {
                                         return (
-                                            <Image
+                                            <img
                                                 alt="star"
                                                 src="/starIcon.svg"
                                                 width={16}
@@ -40,7 +38,7 @@ const AppStore = () => {
                 </div>
                 <div className='basis-1/2 flex items-center justify-center w-full'>
                     {/* <div className='flex items-center  justify-center bg-bgMobile h-60 w-60 rounded-full'> */}
-                    <div className='h-64 w-64 flex items-center '><Image className='h-full w-full'height={100} width={100} src="/app-ss.svg" alt="" /></div>
+                    <div className='h-64 w-64 flex items-center '><img className='h-full w-full'height={100} width={100} src="/app-ss.svg" alt="" /></div>
                     {/* </div> */}
                     {/* dashed circular div */}
                     <motion.div
@@ -58,11 +56,11 @@ const AppStore = () => {
                         }}
                         style={{ border: "3px solid white ", borderStyle: "dashed" }} className=' absolute rounded-full h-96 w-96  border-dashed border-white'>
                         {/* red ghost */}
-                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ top: "55px" }} className='absolute h-16 w-12'><Image height={100} width={100} className='h-full w-full' src="/blue-ghost.png" alt="" /></motion.div>
+                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ top: "55px" }} className='absolute h-16 w-12'><img height={100} width={100} className='h-full w-full' src="/blue-ghost.png" alt="" /></motion.div>
                         {/* blue ghost */}
-                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ right: "-30px", top: "50%", transform: "translate(-50%,-50%)" }} className='absolute h-16 w-14'><Image height={100} width={100} className='h-full w-full' src="/red-ghost.png" alt="" /></motion.div>
+                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ right: "-30px", top: "50%", transform: "translate(-50%,-50%)" }} className='absolute h-16 w-14'><img height={100} width={100} className='h-full w-full' src="/red-ghost.png" alt="" /></motion.div>
                         {/* voilet ghost */}
-                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ bottom: "-22px", right: "50%" }} className='absolute h-14 w-12'><Image height={100} width={100} src="/newGhost.png" alt="" /></motion.div>
+                        <motion.div whileInView="visible" viewport={{ once: true }} animate={{ rotate: -360 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{ bottom: "-22px", right: "50%" }} className='absolute h-14 w-12'><img height={100} width={100} src="/newGhost.png" alt="" /></motion.div>
                     </motion.div>
                 </div>
 
@@ -92,7 +90,7 @@ const AppStore = () => {
                     className="h-28 w-24 absolute"
                     style={{ right: "50%", top: "40%", transform: "translate(50%,50%)" }}
                 >
-                    <Image height={100} width={100} src="/leaf.png" alt="" />
+                    <img height={100} width={100} src="/leaf.png" alt="" />
                 </motion.div>
 
                 {/* small circle 1 */}
@@ -102,7 +100,7 @@ const AppStore = () => {
                 {/* small circle 3 */}
                 <motion.div whileInView="visible" viewport={{ once: true }} animate={{ x :-150 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }} style={{right:"150px",top:"-15px"}} className='absolute bg-yellow-300 rounded-full h-12 w-12'></motion.div>
                 {/* Single Leaf */}
-                <motion.div whileInView="visible" viewport={{ once: true }} animate={{ x :150 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }}  style={{left :"150px",top:"0px"}} className='absolute  h-12 w-12'><Image src="/singleLeaf.png" height={48} width={48} alt="" /></motion.div>
+                <motion.div whileInView="visible" viewport={{ once: true }} animate={{ x :150 }} transition={{ type: "spring", duration: 4, bounce: 0.4 }}  style={{left :"150px",top:"0px"}} className='absolute  h-12 w-12'><img src="/singleLeaf.png" height={48} width={48} alt="" /></motion.div>
             </div>
         </div>
     )

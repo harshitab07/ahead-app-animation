@@ -1,9 +1,10 @@
-import Header from "@/components/Header";
-import AppStore from "@/components/AppStore";
+import 'tailwindcss/tailwind.css';
+import Header from "../components/Header";
+import AppStore from "../components/AppStore";
 import EQbeatsIQ from "../components/EQbeatsIQ";
-import SoundsFamiliar from "@/components/SoundsFamiliar";
-import MeetAheadCard from "@/components/MeetAheadCard";
-import SelfImprovement from "@/components/SelfImprovement";
+import SoundsFamiliar from "../components/SoundsFamiliar";
+import MeetAheadCard from "../components/MeetAheadCard";
+import SelfImprovement from "../components/SelfImprovement";
 import BeBestYou from "../components/BeBestYou";
 import EverWonder from "../components/EverWonder";
 import Test from "../components/Test";
@@ -18,7 +19,7 @@ export default function Home() {
       <AppStore />
       <EQbeatsIQ />
       <SoundsFamiliar />
-      <MeetAheadCard/>
+      <MeetAheadCard />
       <SelfImprovement />
       <BeBestYou />
       <EverWonder />

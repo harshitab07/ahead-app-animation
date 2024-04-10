@@ -1,7 +1,5 @@
-"use client";
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
 
 const WorkWithUs = () => {
   return (
@@ -48,7 +46,7 @@ const WorkWithUs = () => {
                   hidden: { opacity: 0, scale: 0.5, rotate: 0 },
                 }}
               >
-                <Image width={60} height={60} alt="" src="/ghost.png" />
+                <img width={60} height={60} alt="" src="/ghost.png" />
               </motion.div>
               <div className="flex flex-col gap-3 p-4">
                 <h2 className="font-bold">About</h2>
@@ -68,7 +66,7 @@ const WorkWithUs = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 max-h-[75vh] overflow-y-auto pr-6 custom-scrollbar">
+          <div className="flex flex-col gap-5 max-h-[75vh] overflow-y-auto pr-6 custom-scrollbar" style={{scrollbarWidth: "none"}}>
             {[...Array(6)].map((val, index) => (
               <div
                 className="p-4 bg-white rounded-2xl space-y-6 w-[20rem]"

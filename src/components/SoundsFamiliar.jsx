@@ -1,7 +1,5 @@
-"use client";
 import { motion } from "framer-motion";
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 
 const SoundsFamiliar = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
@@ -62,15 +60,16 @@ const SoundsFamiliar = () => {
             hidden: { opacity: 0, scale: 0},
           }}
         >
-          <Image width={70} height={70} alt="" src="/red-ghost.png" />
+          <img width={70} height={70} alt="" src="/red-ghost.png" />
         </motion.div>
       </div>
       <div
-        className=" p-10 flex space-x-8 gap-7 items-center overflow-x-auto hide-scrollbar h-250"
+        className=" p-10 flex space-x-8 gap-7 items-center overflow-x-auto h-250"
+        style={{scrollbarWidth: "none"}}
         ref={boxContainerRef}
       >
         <div className="rounded-xl bg-purple-200 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-          <Image width={70} height={70} alt="" src="/pouting-face.png" />
+          <img width={70} height={70} alt="" src="/pouting-face.png" />
           <h3 className="font-bold text-lg">You argue with a colleague</h3>
           <p className="text-black-700">
             You get angry and defensive,instead of staying open and working
@@ -79,7 +78,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className="rounded-xl bg-blue-300 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300  ease-in-out">
-          <Image width={70} height={70} alt="" src="/star-struck.png" />
+          <img width={70} height={70} alt="" src="/star-struck.png" />
           <h3 className="font-bold text-lg">
             You get a prmotion at work
           </h3>
@@ -90,7 +89,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className="rounded-xl bg-yellow-200 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300  ease-in-out">
-        <Image width={70} height={70} alt="" src="/raised-eyebrow.png" />
+        <img width={70} height={70} alt="" src="/raised-eyebrow.png" />
           <h3 className="font-bold text-lg">You attend a class reunion</h3>
           <p className="text-black-700">
             You compare yourelf with your peers your self judgement more
@@ -99,7 +98,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className=" rounded-xl bg-violet-400 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-        <Image width={70} height={70} alt="" src="/grimacing-face.png" />
+        <img width={70} height={70} alt="" src="/grimacing-face.png" />
           <h3 className="font-bold text-lg text-white">
             You are at a lively dinner party
           </h3>
@@ -110,7 +109,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className="rounded-xl bg-blue-100 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-        <Image width={70} height={70} alt="" src="/flushed-face.png" />
+        <img width={70} height={70} alt="" src="/flushed-face.png" />
           <h3 className="font-bold text-lg ">
             You hit dead end in a negotiation
           </h3>
@@ -121,7 +120,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className="rounded-xl bg-purple-300 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-        <Image width={70} height={70} alt="" src="/pouting-face.png" />
+        <img width={70} height={70} alt="" src="/pouting-face.png" />
           <h3 className="font-bold text-lg">You argue with a colleague</h3>
           <p className="text-black-700">
             You get angry and defensive,instead of staying open and working
@@ -129,7 +128,7 @@ const SoundsFamiliar = () => {
           </p>
         </div>
         <div className="rounded-xl bg-green-300 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-        <Image width={70} height={70} alt="" src="/grinning-face.png" />
+        <img width={70} height={70} alt="" src="/grinning-face.png" />
           <h3 className="font-bold text-lg ">
             You are at a lively dinner party
           </h3>
@@ -140,7 +139,7 @@ const SoundsFamiliar = () => {
         </div>
 
         <div className="rounded-xl bg-orange-200 min-w-[350px]  p-6 flex flex-col gap-4 hover:scale-110 hover:-rotate-12 hover:duration-300 ease-in-out">
-        <Image width={70} height={70} alt="" src="/grimacing-face.png" />
+        <img width={70} height={70} alt="" src="/grimacing-face.png" />
           <h3 className="font-bold text-lg ">
             You hit dead end in a negotiation
           </h3>
