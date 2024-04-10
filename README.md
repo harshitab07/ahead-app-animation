@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+<h3>Deployment Link: </h3><a>https://ahead-app-animation.netlify.app</a>
+
+<h3>Tech Stack: </h3>
+<ul>
+  <li>Framework: NextJs</li>
+  <li>Motion framer for animation</li>
+</ul>
+
+![image](https://github.com/harshitab07/ahead-app-animation/assets/95317276/61b161fa-f50a-47c5-846d-43ae9f681265)
+>>>>>>> efff8cb393728c82757989a4b207658978a3a63e
