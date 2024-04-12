@@ -1,6 +1,100 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+// import * as React from 'react';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate } from "react-router-dom";
+
+const Questions = [
+  "What's your name?", "What's your role?", "What's your favorite tech-stack?"
+]
 const Test = () => {
+
+  const TestPopup = () => {
+    const [open, setOpen] = React.useState(false);
+    const [quesCount, setQuesCount] = useState(0);
+    const [answers, setAnswers] = useState([]);
+    const [answerField, setAnswerField] = useState('');
+    const navigate = useNavigate();
+    
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+  
+    const handleClose = () => {
+      setOpen(false);
+    };
+
+    const addAnswer = (e) => {
+      if (e.target.value !== "") setAnswers([...answers, e.target.value]);
+    }
+
+    const handleNext = () => {
+      setAnswerField('');
+      if(quesCount + 1 < Questions.length) {
+        setQuesCount(quesCount + 1);
+      } else {
+        handleClose();
+        setQuesCount(0);
+        // save answers
+        let id = new Date();
+        id = id.getTime();
+
+        let results = localStorage.getItem('results');
+        if(results) {
+          results = JSON.parse(results);
+          localStorage.setItem('results', JSON.stringify([...results, {answers, id}]));
+        } else {
+          localStorage.setItem('results', JSON.stringify([{answers, id}]));
+        }
+        navigate(`/results/${id}`);
+      }
+
+    }
+  
+    return (
+      <React.Fragment>
+        <Button variant="outlined" onClick={handleClickOpen}>
+          Start Test
+        </Button>
+        <Dialog
+          open={open}
+          onClose={handleClose}
+        >
+          <DialogTitle>Start Test</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              
+            </DialogContentText>
+            {Questions[quesCount]}
+            <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="name"
+            label="Answer"
+            type="text"
+            value={answerField}
+            fullWidth
+            variant="standard"
+            onChange={(e) => setAnswerField(e.target.value)}
+            onBlur={addAnswer}
+          />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClose}>Cancel</Button>
+            <Button onClick={handleNext}>Next</Button>
+          </DialogActions>
+        </Dialog>
+      </React.Fragment>
+    );
+  }
+
   return (
     <section className="mt-20 flex flex-col gap-3 text-center p-8">
       <p className="text-center">We take privacy seriously</p>
@@ -42,9 +136,7 @@ const Test = () => {
           }}
           className="pt-3"
         >
-          <button className="rounded-3xl p-4 px-6 text-white bg-black">
-            Start a test
-          </button>
+          <TestPopup />
         </motion.div>
         <div className="text-sm mt-4">Take only 5 minutes</div>
       </motion.div>
