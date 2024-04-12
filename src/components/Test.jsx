@@ -28,6 +28,8 @@ const Test = () => {
   
     const handleClose = () => {
       setOpen(false);
+      setQuesCount(0);
+      setAnswerField('');
     };
 
     const addAnswer = (e) => {
@@ -40,7 +42,6 @@ const Test = () => {
         setQuesCount(quesCount + 1);
       } else {
         handleClose();
-        setQuesCount(0);
         // save answers
         let id = new Date();
         id = id.getTime();
